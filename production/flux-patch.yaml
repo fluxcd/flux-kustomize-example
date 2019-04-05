@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo
+  namespace: demo
+spec:
+  template:
+    spec:
+      initContainers:
+      - name: init
+        image: alpine:3.5
+      containers:
+      - name: podinfod
+        image: stefanprodan/podinfo:1.3.2
