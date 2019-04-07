@@ -4,6 +4,10 @@ kind: Deployment
 metadata:
   name: podinfo
   namespace: demo
+  annotations:
+    flux.weave.works/automated: 'true'
+    flux.weave.works/tag.init: regexp:^3.*
+    flux.weave.works/tag.podinfod: semver:~1.4
 spec:
   template:
     spec:
