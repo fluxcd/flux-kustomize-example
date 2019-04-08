@@ -36,7 +36,7 @@ your girhub fork.
 
 ```
 ├── base
-│   ├── demo.yaml
+│   ├── demo-ns.yaml
 │   ├── kustomization.yaml
 │   ├── podinfo-dep.yaml
 │   ├── podinfo-hpa.yaml
