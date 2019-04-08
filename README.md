@@ -57,7 +57,7 @@ your girhub fork.
 * the `staging` and `production` directores make use of `base`, with a few patches, 
   to generate the final manifests for each environment:
     * `staging/kustomization.yaml` and `production/kustomization.yaml`
-       are Kustomaze config files which indicate how to apply the patches.
+       are Kustomize config files which indicate how to apply the patches.
     * `staging/flux-patch.yaml` and `production/flux-patch.yaml` contain
        environment-specific Flux [annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
        and the container images to be deployed in each environment.
