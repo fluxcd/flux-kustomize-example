@@ -16,7 +16,7 @@ have different requirments for each cluster:
 
 1. We want automated deployments for `staging` but not for `production` since we want a rubber-stamp 
    every change. However, we want to still be able to make the changes with `fluxctl`.
-2. Since we expect `production` to have a higher load than `staging` we want 
+2. Since we expect `production` to have a higher load than `staging,  we want a higher replica ramge there.
 
 ## How to run the example
 
@@ -28,6 +28,9 @@ Then, you need to fork this repo and add the fork's URL as the `--git-url` flag 
 
 After that, you need to pick an environment to run (`staging` or `production`) and
 ask Flux to use that environment by adding `--git-path=staging` or `--git-path=production`
+
+As usual, you need to make sure that the ssh key hown by `fluxctl identity` is added to the
+your girhub fork.
 
 ## How does this example work?
 
