@@ -76,5 +76,5 @@ your girhub fork.
   correctly) to the updaters as environment variables.
 
 * `.flux.yaml` files contain duplicated code. This is intentional, 
-  to make the example simpler.They could be factored out in shell-scripts placed 
+  to make the example simpler. They could be factored out in shell-scripts placed 
   in the repo.
