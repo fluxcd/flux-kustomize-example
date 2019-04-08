@@ -16,7 +16,7 @@ have different requirments for each cluster:
 
 1. We want automated deployments for `staging` but not for `production` since we want a rubber-stamp 
    every change. However, we want to still be able to make the changes with `fluxctl`.
-2. Since we expect `production` to have a higher load than `staging,  we want a higher replica ramge there.
+2. Since we expect `production` to have a higher load than `staging`, we want a higher replica ramge there.
 
 ## How to run the example
 
