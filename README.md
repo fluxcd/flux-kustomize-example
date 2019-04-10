@@ -77,4 +77,5 @@ your girhub fork.
 
 * `.flux.yaml` files contain duplicated code. This is intentional, 
   to make the example simpler. They could be factored out in shell-scripts placed 
-  in the repo.
+  in the repo. As an alternative (thanks @rade !) we can also look for `.flux.yaml`
+  files in parent directories and place a unique file for both.
