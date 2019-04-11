@@ -35,6 +35,7 @@ your girhub fork.
 ## How does this example work?
 
 ```
+├── .flux.yaml
 ├── base
 │   ├── demo-ns.yaml
 │   ├── kustomization.yaml
@@ -42,11 +43,9 @@ your girhub fork.
 │   ├── podinfo-hpa.yaml
 │   └── podinfo-svc.yaml
 ├── staging
-│   ├── .flux.yaml
 │   ├── flux-patch.yaml
 │   └── kustomization.yaml
 └── production
-    ├── .flux.yaml
     ├── flux-patch.yaml
     ├── kustomization.yaml
     └── replicas-patch.yaml
@@ -62,9 +61,12 @@ your girhub fork.
        environment-specific Flux [annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
        and the container images to be deployed in each environment.
     * `production/replicas-patch.yaml` increases the number of replicas of podinfo in production.
-* `.flux.yaml` files are used by Flux for generating and updating manifests. In particular, they
-  tell flux to generate manifests running `kustomize build` and update policy annotations and container images
-  by editing `flux-patch.yaml` with [`kubeyaml`](https://github.com/squaremo/kubeyaml)
+* `.flux.yaml` is used by Flux to know how to generate and update manifests. 
+  Its commands are run in the directory (`staging` or `production`) 
+  passed to flux through `--git-path=`. In this particular case, `.flux.yaml` 
+  tells Flux to generate manifests running `kustomize build` and update policy 
+  annotations and container image by editing `flux-patch.yaml` with 
+  [`kubeyaml`](https://github.com/squaremo/kubeyaml).
 
 ## Known warts
 
@@ -74,8 +76,3 @@ your girhub fork.
   to add the new workloads on demand. 
   To make this easier, we should pass the `apiVersion` and `kind` (capitalized 
   correctly) to the updaters as environment variables.
-
-* `.flux.yaml` files contain duplicated code. This is intentional, 
-  to make the example simpler. They could be factored out in shell-scripts placed 
-  in the repo. As an alternative (thanks @rade !) we can also look for `.flux.yaml`
-  files in parent directories and place a unique file for both.
