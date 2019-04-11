@@ -13,7 +13,7 @@ spec:
     spec:
       initContainers:
       - name: init
-        image: alpine:3.6
+        image: alpine:3.9
       containers:
       - name: podinfod
         image: stefanprodan/podinfo:1.4.4
