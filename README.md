@@ -67,12 +67,3 @@ your girhub fork.
   tells Flux to generate manifests running `kustomize build` and update policy 
   annotations and container image by editing `flux-patch.yaml` with 
   [`kubeyaml`](https://github.com/squaremo/kubeyaml).
-
-## Known warts
-
-* When adding a new workload in `base/`, it's required to manually add the same
-  barebones workload in `{staging,production}/flux-patch.yaml`. It shouldn't be
-  too hard to write a tool to do this automatically and use it in the generator
-  to add the new workloads on demand. 
-  To make this easier, we should pass the `apiVersion` and `kind` (capitalized 
-  correctly) to the updaters as environment variables.

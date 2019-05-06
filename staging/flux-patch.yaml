@@ -2,18 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
-  namespace: demo
   annotations:
-    flux.weave.works/automated: 'true'
+    flux.weave.works/automated: "true"
     flux.weave.works/tag.init: regexp:^3.*
     flux.weave.works/tag.podinfod: semver:~1.4
+  name: podinfo
+  namespace: demo
 spec:
   template:
     spec:
-      initContainers:
-      - name: init
-        image: alpine:3.9
-      containers:
+      $setElementOrder/containers:
       - name: podinfod
-        image: stefanprodan/podinfo:1.4.4
+      $setElementOrder/initContainers:
+      - name: init
+      containers:
+      - image: stefanprodan/podinfo:1.4,4
+        name: podinfod
+      initContainers:
+      - image: alpine:3.9
+        name: init
