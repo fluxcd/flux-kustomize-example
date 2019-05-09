@@ -65,5 +65,5 @@ your girhub fork.
   Its commands are run in the directory (`staging` or `production`) 
   passed to flux through `--git-path=`. In this particular case, `.flux.yaml` 
   tells Flux to generate manifests running `kustomize build` and update policy 
-  annotations and container image by editing `flux-patch.yaml` with 
-  [`kubeyaml`](https://github.com/squaremo/kubeyaml).
+  annotations and container image by maintaining `flux-patch.yaml` with 
+  [`kubeyaml`](https://github.com/squaremo/kubeyaml) and `kubedelta`.
