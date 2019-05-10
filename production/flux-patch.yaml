@@ -5,19 +5,6 @@ metadata:
   annotations:
     flux.weave.works/locked: "true"
     flux.weave.works/locked_msg: Lock deployment in production
-    flux.weave.works/locked_user: Alfonso Acosta <fons@weave.works>
+    flux.weave.works/locked_user: Alfonso Acosta <fons@syntacticsugar.consulting>
   name: podinfo
   namespace: demo
-spec:
-  template:
-    spec:
-      $setElementOrder/containers:
-      - name: podinfod
-      $setElementOrder/initContainers:
-      - name: init
-      containers:
-      - image: stefanprodan/podinfo:1.3.2
-        name: podinfod
-      initContainers:
-      - image: alpine:3.5
-        name: init
