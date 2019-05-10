@@ -10,7 +10,7 @@ For this example we assume an scenario with two clusters, `staging` and
 automatic releases and supporting all `fluxctl` commands) to manage both
 clusters while minimizing duplicated declarations.
 
-`staging` and `producction` are almost identical, they both deploy a
+`staging` and `production` are almost identical, they both deploy a
 [`podinfo`](https://github.com/stefanprodan/k8s-podinfo) service. However, we
 have different requirments for each cluster:
 
