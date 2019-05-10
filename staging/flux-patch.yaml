@@ -8,3 +8,11 @@ metadata:
     flux.weave.works/tag.podinfod: semver:~1.4
   name: podinfo
   namespace: demo
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: podinfod
+      containers:
+      - image: stefanprodan/podinfo:1.4.4
+        name: podinfod
