@@ -1,0 +1,10 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.init: regexp:^3.*
+    flux.weave.works/tag.podinfod: semver:~1.4
+  name: podinfo
+  namespace: demo
