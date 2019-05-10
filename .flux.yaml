@@ -1,8 +1,5 @@
 version: 1
-generators: 
-  - command: kustomize build .
-updaters:
-  - containerImage:
-      command: ../updaters.sh containerimage flux-patch.yaml
-    annotation:
-      command: ../updaters.sh annotation flux-patch.yaml
+patchUpdated:
+  generators:
+    - command: kustomize build .
+  patchFile: flux-patch.yaml

@@ -61,9 +61,9 @@ your girhub fork.
        environment-specific Flux [annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
        and the container images to be deployed in each environment.
     * `production/replicas-patch.yaml` increases the number of replicas of podinfo in production.
-* `.flux.yaml` is used by Flux to know how to generate and update manifests. 
-  Its commands are run in the directory (`staging` or `production`) 
-  passed to flux through `--git-path=`. In this particular case, `.flux.yaml` 
-  tells Flux to generate manifests running `kustomize build` and update policy 
-  annotations and container image by maintaining `flux-patch.yaml` with 
-  [`kubeyaml`](https://github.com/squaremo/kubeyaml) and `kubedelta`.
+* `.flux.yaml` is used by Flux to generate and update manifests. 
+  Its commands are run in the directory (`staging` or `production`). 
+  In this particular case, `.flux.yaml` tells Flux to generate manifests running 
+  `kustomize build` and update policy annotations and container images by editing 
+  `flux-patch.yaml`, which will implicitly applied to the manifests generated with
+  `kustomize build`.

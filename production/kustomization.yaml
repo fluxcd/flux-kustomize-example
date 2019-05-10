@@ -3,5 +3,4 @@ kind: Kustomization
 bases:
 - ../base/
 patchesStrategicMerge:
-- flux-patch.yaml
 - replicas-patch.yaml
