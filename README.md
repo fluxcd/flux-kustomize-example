@@ -20,17 +20,19 @@ have different requirments for each cluster:
 
 ## How to run the example
 
-In order to run this example, you need to deploy Flux using the latest container 
-image indicated in [Flux's PR#1848](https://github.com/weaveworks/flux/pull/1848)
-(which hasn't been merged yet).
+In order to run this example, you need to:
 
-Then, you need to fork this repo and add the fork's URL as the `--git-url` flag of Flux.
+1. Deploy Flux using the latest container image indicated in [Flux's PR#1848](https://github.com/weaveworks/flux/pull/1848).
 
-After that, you need to pick an environment to run (`staging` or `production`) and
-ask Flux to use that environment by adding `--git-path=staging` or `--git-path=production`
+2. Make sure to pass flag `--manifest-generation=true` to Flux.
 
-As usual, you need to make sure that the ssh key hown by `fluxctl identity` is added to the
-your girhub fork.
+3. Fork this repository and add the fork's URL as the `--git-url` flag of Flux.
+
+4. Pick an environment to run (`staging` or `production`) and ask Flux to use
+that environment by passing flag `--git-path=staging` or `--git-path=production`
+
+5. As usual, you need to make sure that the ssh key hown by `fluxctl identity`
+is added to the your girhub fork.
 
 ## How does this example work?
 
