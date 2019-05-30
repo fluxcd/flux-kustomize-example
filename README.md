@@ -2,8 +2,8 @@
 
 ## Scenario and Goals
 
-The following example makes use of [Flux's PR#1848](https://github.com/weaveworks/flux/pull/1848)
-for factoring out manifests using [Kustomize](https://github.com/kubernetes-sigs/kustomize).
+The following example makes use of Flux's experimental feature
+for factoring out manifests using [Kustomize](https://github.com/kubernetes-sigs/kustomize) (and other such tooling, in theory).
 
 For this example we assume an scenario with two clusters, `staging` and
 `production`. The goal is to levarage the full functionality of Flux (including
@@ -22,17 +22,17 @@ have different requirments for each cluster:
 
 In order to run this example, you need to:
 
-1. Deploy Flux using the latest container image indicated in [Flux's PR#1848](https://github.com/weaveworks/flux/pull/1848).
+1. Deploy Flux using the latest container image from the pre-releases repo: https://hub.docker.com/r/weaveworks/flux-prerelease/tags
 
-2. Make sure to pass flag `--manifest-generation=true` to Flux.
+2. Make sure to pass the flag `--manifest-generation=true` to fluxd, in its container spec.
 
-3. Fork this repository and add the fork's URL as the `--git-url` flag of Flux.
+3. Fork this repository and add the fork's URL as the `--git-url` flag for the fluxd container.
 
 4. Pick an environment to run (`staging` or `production`) and ask Flux to use
 that environment by passing flag `--git-path=staging` or `--git-path=production`
 
 5. As usual, you need to make sure that the ssh key hown by `fluxctl identity`
-is added to the your girhub fork.
+is added to the your github fork.
 
 ## How does this example work?
 
