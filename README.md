@@ -69,3 +69,8 @@ is added to the your github fork.
   `kustomize build` and update policy annotations and container images by editing 
   `flux-patch.yaml`, which will implicitly applied to the manifests generated with
   `kustomize build`.
+
+## I want to know more
+
+Check the [documentation of `.flux.yaml`
+files](https://github.com/weaveworks/flux/blob/master/site/fluxyaml-config-files.md)
