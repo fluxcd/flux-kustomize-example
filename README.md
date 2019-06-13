@@ -22,7 +22,7 @@ have different requirments for each cluster:
 
 In order to run this example, you need to:
 
-1. Deploy Flux using the latest container image from the pre-releases repo: https://hub.docker.com/r/weaveworks/flux-prerelease/tags
+1. Deploy Flux version 1.13.0 or newer.
 
 2. Make sure to pass the flag `--manifest-generation=true` to fluxd, in its container spec.
 
