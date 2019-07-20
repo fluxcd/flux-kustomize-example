@@ -31,7 +31,7 @@ In order to run this example, you need to:
 4. Pick an environment to run (`staging` or `production`) and ask Flux to use
 that environment by passing flag `--git-path=staging` or `--git-path=production`
 
-5. As usual, you need to make sure that the ssh key hown by `fluxctl identity`
+5. As usual, you need to make sure that the ssh key shown by `fluxctl identity`
 is added to the your github fork.
 
 ## How does this example work?
