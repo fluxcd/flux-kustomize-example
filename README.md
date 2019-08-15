@@ -60,7 +60,7 @@ is added to the your github fork.
     * `staging/kustomization.yaml` and `production/kustomization.yaml`
        are Kustomize config files which indicate how to apply the patches.
     * `staging/flux-patch.yaml` and `production/flux-patch.yaml` contain
-       environment-specific Flux [annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
+       environment-specific Flux [annotations](https://github.com/fluxcd/flux/blob/master/docs/tutorials/driving-flux.md)
        and the container images to be deployed in each environment.
     * `production/replicas-patch.yaml` increases the number of replicas of podinfo in production.
 * `.flux.yaml` is used by Flux to generate and update manifests. 
@@ -73,4 +73,4 @@ is added to the your github fork.
 ## I want to know more
 
 Check the [documentation of `.flux.yaml`
-files](https://github.com/weaveworks/flux/blob/master/site/fluxyaml-config-files.md)
+files](https://github.com/fluxcd/flux/blob/master/docs/references/fluxyaml-config-files.md)
