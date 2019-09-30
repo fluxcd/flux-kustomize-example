@@ -55,7 +55,7 @@ is added to the your github fork.
 
 * `base` contains the base manifests. The resources to be deployed in 
   `staging` and `production` are almost identical to the ones described here.
-* the `staging` and `production` directores make use of `base`, with a few patches, 
+* the `staging` and `production` directories make use of `base`, with a few patches, 
   to generate the final manifests for each environment:
     * `staging/kustomization.yaml` and `production/kustomization.yaml`
        are Kustomize config files which indicate how to apply the patches.
