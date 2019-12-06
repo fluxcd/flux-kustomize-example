@@ -72,5 +72,8 @@ is added to the your github fork.
 
 ## I want to know more
 
-Check the [documentation of `.flux.yaml`
-files](https://docs.fluxcd.io/en/latest/references/fluxyaml-config-files.html)
+For a more sophisticated example of using Flux with Kustomize for creating a
+multitenant cluster you can go to https://github.com/fluxcd/multi-tenancy .
+
+For more details about how `.flux.yaml` files work  you can read the
+[reference documentation](https://docs.fluxcd.io/en/latest/references/fluxyaml-config-files.html)
