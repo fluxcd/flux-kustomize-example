@@ -2,8 +2,8 @@
 
 ## Scenario and Goals
 
-The following example makes use of Flux's experimental feature
-for factoring out manifests using [Kustomize](https://github.com/kubernetes-sigs/kustomize) (and other such tooling, in theory).
+The following example makes use of Flux's manifest-generation feature
+together with [Kustomize](https://github.com/kubernetes-sigs/kustomize) (and other such tooling, in theory).
 
 For this example we assume an scenario with two clusters, `staging` and
 `production`. The goal is to levarage the full functionality of Flux (including
