@@ -60,7 +60,7 @@ is added to the your github fork.
     * `staging/kustomization.yaml` and `production/kustomization.yaml`
        are Kustomize config files which indicate how to apply the patches.
     * `staging/flux-patch.yaml` and `production/flux-patch.yaml` contain
-       environment-specific Flux [annotations](https://docs.fluxcd.io/en/latest/tutorials/driving-flux.html)
+       environment-specific Flux [annotations](https://docs.fluxcd.io/en/latest/tutorials/driving-flux/)
        and the container images to be deployed in each environment.
     * `production/replicas-patch.yaml` increases the number of replicas of podinfo in production.
 * `.flux.yaml` is used by Flux to generate and update manifests. 
@@ -76,4 +76,4 @@ For a more sophisticated example of using Flux with Kustomize for creating a
 multitenant cluster you can go to https://github.com/fluxcd/multi-tenancy .
 
 For more details about how `.flux.yaml` files work  you can read the
-[reference documentation](https://docs.fluxcd.io/en/latest/references/fluxyaml-config-files.html)
+[reference documentation](https://docs.fluxcd.io/en/latest/references/fluxyaml-config-files/)
