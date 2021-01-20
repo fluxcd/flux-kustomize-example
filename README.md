@@ -1,6 +1,14 @@
 # Using Flux with Kustomize
 
-## Scenario and Goals
+## We are moving to Flux v2
+
+> ⚠️ Please note: In preparation of [Flux v2](https://toolkit.fluxcd.io/) GA this repository with Flux v1 examples has been archived. The Flux v2 equivalent of what is shown here can be found at [flux2-kustomize-helm-example](https://github.com/fluxcd/flux2-kustomize-helm-example).
+>
+> Thanks a lot for your interest.
+
+## For posterity
+
+### Scenario and Goals
 
 The following example makes use of Flux's manifest-generation feature
 together with [Kustomize](https://github.com/kubernetes-sigs/kustomize) (and other such tooling, in theory).
@@ -18,7 +26,7 @@ have different requirments for each cluster:
    every change. However, we want to still be able to make the changes with `fluxctl`.
 2. Since we expect `production` to have a higher load than `staging`, we want a higher replica range there.
 
-## How to run the example
+### How to run the example
 
 In order to run this example, you need to:
 
@@ -34,7 +42,7 @@ that environment by passing flag `--git-path=staging` or `--git-path=production`
 5. As usual, you need to make sure that the ssh key shown by `fluxctl identity`
 is added to the your github fork.
 
-## How does this example work?
+### How does this example work?
 
 ```
 ├── .flux.yaml
@@ -70,7 +78,7 @@ is added to the your github fork.
   `flux-patch.yaml`, which will implicitly applied to the manifests generated with
   `kustomize build`.
 
-## I want to know more
+### I want to know more
 
 For a more sophisticated example of using Flux with Kustomize for creating a
 multitenant cluster you can go to https://github.com/fluxcd/multi-tenancy .
